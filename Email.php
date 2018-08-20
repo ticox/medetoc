@@ -21,18 +21,18 @@ $phpmailer->IsSMTP();
 $phpmailer->SMTPAuth = true;
 
 $phpmailer->setFrom($phpmailer->Username,$from_name);
-$phpmailer->AddAddress("soporte@cotedem.com");
+$phpmailer->AddAddress("info@cotedem.com");
 $phpmailer->Subject ="Prueba"; 
 
 $phpmailer->Body .="<h1 style='color:#3498db;'>".$from_name.":</h1>";
 $phpmailer->Body .= "<h3>".$attach1."</h3>";
 
 $phpmailer->AddAttachment($attach1, "attach1");
-$phpmailer->AddBCC("soporte@cotedem.com", "bcc1");
+$phpmailer->AddBCC("info@cotedem.com", "bcc1");
 $phpmailer->IsHTML(true);
 $enviado = $phpmailer->Send();
 if($enviado) {
-    echo 'email send successful';
+    echo 'Email Enviado Exiosamente';
 }
 
 ?>
